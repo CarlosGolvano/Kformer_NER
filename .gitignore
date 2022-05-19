@@ -136,3 +136,6 @@ models/
 
 # Output
 outputs/
+
+# InteliJ related
+.idea/

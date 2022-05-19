@@ -3,7 +3,7 @@ export WARMUP_UPDATES=150
 export MAX_UPDATES=8000
 export BSZ=16
 export SEED=42
-CUDA_VISIBLE_DEVICES=0 fairseq-train --ddp-backend=legacy_ddp \
+CUDA_VISIBLE_DEVICES=1 fairseq-train --ddp-backend=legacy_ddp \
     ../data/social_iqa/ \
     --user-dir ./examples/roberta/social_iqa --restore-file ../models/roberta.base/model.pt \
     --reset-optimizer --reset-dataloader --reset-meters --no-epoch-checkpoints --no-last-checkpoints \
@@ -14,3 +14,11 @@ CUDA_VISIBLE_DEVICES=0 fairseq-train --ddp-backend=legacy_ddp \
     --lr-scheduler polynomial_decay --lr $LR --warmup-updates $WARMUP_UPDATES --total-num-update $MAX_UPDATES \
     --batch-size $BSZ --max-update $MAX_UPDATES --log-format simple --log-interval 25 --seed $SEED \
     --save-dir ../outputs/social_iqa/roberta_base_prefix_10_12/output_${LR}_${BSZ}_${MAX_UPDATES}_${SEED} --knowledge_layer 9 12
+
+echo "Press any key to continue"
+while [ true ] ; do
+read -t 3 -n 1
+if [ $? = 0 ] ; then
+exit
+fi
+done

@@ -49,7 +49,7 @@ def main():
                         'A: ' + choice['text'],
                         no_separator=True
                     )
-                    score = roberta.predict('sentence_classification_head', input, return_logits=True, knowledge = knowledge_bin)
+                    score = roberta.predict('sentence_classification_head', input, return_logits=True, knowledge=knowledge_bin)
                     # score = roberta.predict('sentence_classification_head', input, return_logits=True)
                     scores.append(score)
                 pred = torch.cat(scores).argmax()
@@ -64,6 +64,7 @@ def main():
     output_file = os.path.join(args.model_path, "eval_out.txt")
     with open(output_file, "w") as writer:
         writer.write(json.dumps(result, indent=2))
+
 
 if __name__ == "__main__":
     main()

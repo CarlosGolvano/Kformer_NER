@@ -31,6 +31,11 @@ fairseq.egg-info/entry_points.txt
 fairseq.egg-info/not-zip-safe
 fairseq.egg-info/requires.txt
 fairseq.egg-info/top_level.txt
+fairseq/clib/libbleu/libbleu.cpp
+fairseq/clib/libbleu/module.cpp
+fairseq/clib/libnat/edit_dist.cpp
+fairseq/data/data_utils_fast.pyx
+fairseq/data/token_block_utils_fast.pyx
 fairseq/benchmark/__init__.py
 fairseq/benchmark/dummy_lm.py
 fairseq/benchmark/dummy_masked_lm.py
@@ -38,6 +43,7 @@ fairseq/benchmark/dummy_model.py
 fairseq/benchmark/dummy_mt.py
 fairseq/clib/libbleu/libbleu.cpp
 fairseq/clib/libbleu/module.cpp
+fairseq/clib/libnat/edit_dist.cpp
 fairseq/config/__init__.py
 fairseq/config/config.yaml
 fairseq/config/model/transformer_lm/transformer_lm_baevski_gbw.yaml
@@ -175,14 +181,8 @@ fairseq/examples/roberta/commonsense_qa/README.md
 fairseq/examples/roberta/commonsense_qa/__init__.py
 fairseq/examples/roberta/commonsense_qa/commonsense_qa_task.py
 fairseq/examples/roberta/commonsense_qa/download_cqa_data.sh
-fairseq/examples/roberta/mask_lm_triple/__init__.py
-fairseq/examples/roberta/mask_lm_triple/mask_lm_triple.py
 fairseq/examples/roberta/med_qa/__init__.py
 fairseq/examples/roberta/med_qa/medqa_task.py
-fairseq/examples/roberta/openbook_qa/__init__.py
-fairseq/examples/roberta/openbook_qa/openbook_qa_task.py
-fairseq/examples/roberta/qasc/__init__.py
-fairseq/examples/roberta/qasc/qasc_task.py
 fairseq/examples/roberta/social_iqa/__init__.py
 fairseq/examples/roberta/social_iqa/social_iqa_task.py
 fairseq/examples/roberta/wsc/README.md
